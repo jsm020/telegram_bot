@@ -9,4 +9,4 @@ async def on_startup_notify(bot: Bot, admins: list):
         try:
             await bot.send_message(admin_id, "Bot is started")
         except Exception as err:
-            logging.exception(f"Admin {admin_id} ga xabar yuborishda xatolik: {err}")
+            logging.exception(f"ERROR.{err}. sending message to {admin_id}")
