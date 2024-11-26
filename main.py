@@ -20,7 +20,7 @@ async def main():
     await on_startup_notify(bot, ADMINS)
     # Handerlarni registratsiya qilamiz
     register_echo_handlers(dp)
-
+#asdad
     # Pollingni boshlaymiz
     try:
         await dp.start_polling(bot)
