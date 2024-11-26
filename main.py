@@ -1,14 +1,12 @@
-import asyncio
-import logging
-import sys
+from handlers.start_handler import register_start_handlers
+from handlers.keyboard_handler import register_keyboard_handlers
 from aiogram import Bot, Dispatcher
-from aiogram.types import BotCommand
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.session.aiohttp import AiohttpSession
 from config import BOT_TOKEN,ADMINS
+from handlers import start_handler, echo
 from utils.notify_admins import on_startup_notify
 from utils.set_bot_commands import set_default_commands
-from handlers.echo import register_echo_handlers 
 async def main():
     # Botni sozlash
     session = AiohttpSession()
@@ -19,8 +17,9 @@ async def main():
     await set_default_commands(bot)
     await on_startup_notify(bot, ADMINS)
     # Handerlarni registratsiya qilamiz
-    register_echo_handlers(dp)
-#asdad
+    register_start_handlers(dp)
+    register_keyboard_handlers(dp)
+    echo.register_echo_handlers(dp)
     # Pollingni boshlaymiz
     try:
         await dp.start_polling(bot)
