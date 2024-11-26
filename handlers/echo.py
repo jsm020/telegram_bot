@@ -6,6 +6,7 @@ echo_router = Router()
 
 @echo_router.message()
 async def echo_message(message: Message):
+    print(message)
     await message.answer(f"Sizning xabaringiz: {message.text}")
 
 # Routerni registratsiya qilish funksiyasi
