@@ -4,5 +4,5 @@ __pycache__
 handlers/__pycache__
 utils/__pycache__
 utils/misc/__pycache__
-
+.idea
 bot.log
