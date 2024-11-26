@@ -1,4 +1,8 @@
 env
 .env
-handlers/__pycache
+__pycache__
+handlers/__pycache__
+utils/__pycache__
+utils/misc/__pycache__
+
 bot.log

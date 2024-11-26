@@ -3,6 +3,6 @@ import logging
 logging.basicConfig(
     format=u'[%(asctime)s] %(message)s',
     level=logging.INFO,
-    filename='bot.log',  # Loglarni 'bot.log' fayliga yozish
-    filemode='w'         # Har safar faylni qayta yozish
+    filename='bot.log',  # write all logs in bot.log
+    filemode='w'         # every moment can write again
 )
