@@ -1,7 +1,6 @@
 from aiogram import Router
 from aiogram.types import Message
 from keyboards.main_keyboard import inline_keyboard
-
 router = Router()
 
 @router.message(lambda message: message.text == "Salom")

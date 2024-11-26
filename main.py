@@ -1,5 +1,6 @@
 from handlers.start_handler import register_start_handlers
 from handlers.keyboard_handler import register_keyboard_handlers
+from handlers.inlinekeyboard_handlers import register_inlinekeyboard_handlers
 from aiogram import Bot, Dispatcher
 from aiogram.fsm.storage.memory import MemoryStorage
 from aiogram.client.session.aiohttp import AiohttpSession
@@ -19,6 +20,7 @@ async def main():
     # Handerlarni registratsiya qilamiz
     register_start_handlers(dp)
     register_keyboard_handlers(dp)
+    register_inlinekeyboard_handlers(dp)
     echo.register_echo_handlers(dp)
     # Pollingni boshlaymiz
     try:
